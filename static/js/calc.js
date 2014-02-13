@@ -25,22 +25,53 @@ $(function() {
     if (outputText === '02') {
       outputText = '2';
     }
-    // FIXME
-    $('#output').text('haha');
+    $('#output').text('outputText');
   });
 
   $('#three').click(function() {
     var outputText = $('#output').text() + '3';
-    // FIXME
+    if (outputText === '03') {
+      outputText = '3';
+    }
     $('#output').text(outputText);
   });
 
   $('#four').click(function() {
-    // FIXME
+    var outputText = $('#output').text() + '4';
+    if (outputText === '04') {
+      outputText = '04';
+    }
+    $('#output').text(outputText);
   });
 
-  // WRITE CODE HERE for buttons 5-9
-
+  $('#five').click(function() {
+    var outputText = $('output').text() + '5';
+    if (outputText === '05') {
+      outputText = '05';
+    }
+  $('#six').click(function)() {
+    var outputText = $('output').text() + '6';
+    if (outputText === '06') {
+      outputText = '06';
+    }
+   $('#seven').click(function)() {
+    var outputText = $('output').text() + '7';
+    if (outputText === '07') {
+      outputText = '07';
+   }
+   $('#eight').click(function)() {
+    var outputText = $('output').text() + '8';
+    if (outputText === '08') {
+      outputText = '08';
+   }
+   $('#nine').click(function)() {
+    var outputText = $('output').text() + '9';
+    if (outputText === '09') {
+      outputText = '09';
+    }
+   
+   }  
+ 
   $('#add').click(function() {
     if (notLastOp()) {
       var outputText = $('#output').text() + '+';
