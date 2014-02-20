@@ -25,7 +25,7 @@ $(function() {
     if (outputText === '02') {
       outputText = '2';
     }
-    $('#output').text('outputText');
+    $('#output').text(outputText);
   });
 
   $('#three').click(function() {
@@ -39,38 +39,48 @@ $(function() {
   $('#four').click(function() {
     var outputText = $('#output').text() + '4';
     if (outputText === '04') {
-      outputText = '04';
+      outputText = '4';
     }
     $('#output').text(outputText);
   });
 
   $('#five').click(function() {
-    var outputText = $('output').text() + '5';
+    var outputText = $('#output').text() + '5';
     if (outputText === '05') {
-      outputText = '05';
+      outputText = '5';
     }
-  $('#six').click(function)() {
-    var outputText = $('output').text() + '6';
+    $('#output').text(outputText);
+  });
+  $('#six').click(function() {
+    var outputText = $('#output').text() + '6';
     if (outputText === '06') {
-      outputText = '06';
+      outputText = '6';
     }
-   $('#seven').click(function)() {
-    var outputText = $('output').text() + '7';
+    $('#output').text(outputText);
+  });
+   $('#seven').click(function() {
+    var outputText = $('#output').text() + '7';
     if (outputText === '07') {
-      outputText = '07';
+      outputText = '7';
    }
-   $('#eight').click(function)() {
-    var outputText = $('output').text() + '8';
+   $('#output').text(outputText);
+  });
+   $('#eight').click(function() {
+    var outputText = $('#output').text() + '8';
     if (outputText === '08') {
-      outputText = '08';
+      outputText = '8';
    }
-   $('#nine').click(function)() {
-    var outputText = $('output').text() + '9';
+   $('#output').text(outputText);
+  });
+   $('#nine').click(function() {
+    var outputText = $('#output').text() + '9';
     if (outputText === '09') {
-      outputText = '09';
+      outputText = '9';
     }
+    $('#output').text(outputText);
+  });
    
-   }  
+    
  
   $('#add').click(function() {
     if (notLastOp()) {
@@ -79,7 +89,33 @@ $(function() {
     }
   });
 
-  // WRITE CODE HERE for sub,mul,div,mod
+  $('#sub').click(function() {
+    if (notLastOp()) {
+      var outputText = $('#output').text() + '-';
+      $('#output').text(outputText);
+    }
+  });
+    
+  $('#mul').click(function() {
+    if(notLastOp()) {
+      var outputText = $('#output').text() + '*';
+      $('#output').text(outputText);
+    }
+  });
+
+  $('#div').click(function() {
+    if(notLastOp()) {
+      var outputText = $('output').text() + '/';
+      $('#output').text(outputText);
+    }
+  });
+
+  $('#mod').click(function() {
+    if(notLastOp()) {
+      var outputText = $('output').text() + '%';
+      $('#output').text(outputText);
+    }
+  });  
 
   $('#sqrt').click(function() {
     var outputText = $('#output').text();
@@ -91,15 +127,14 @@ $(function() {
   $('#square').click(function() {
     var outputText = $('#output').text();
     var outputNum = parseFloat(eval(outputText));
-    // FIXME
-    var newNum = Math.sqrt(outputNum);
+    var newNum = (outputNum*outputNum);
     $('#output').text(newNum);
   });
 
   $('#equals').click(function() {
-    // FIXME
-    var res = eval('4*10+7');
-    $('#output').text(res);
+    var outputText = $('#output').text();
+    var outputNum = eval(outputText);
+    $('#output').text(outputNum);
   });
 
   $('#dot').click(function() {
